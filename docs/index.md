@@ -1,6 +1,6 @@
 # Holiday Flicks API Documentation
 
-Welcome to the Holiday Flicks API documentation. This API is designed to enhance cinematic tourism in France by connecting users to real-world locations featured in films and TV series. It serves as a bridge between the allure of the screen and the charm of French locales, and offers detailed information for tourists, film enthusiasts, and industry professionals.
+Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is designed to enhance cinematic tourism in France by connecting users to real-world locations featured in films and TV series. The Holiday Flicks API serves as a bridge between the allure of the screen and the charm of French locales, and offers detailed information for tourists, film enthusiasts, and industry professionals.
 
 ## Key Features
 * **Catalogue of Movies and Series:** Access comprehensive details such as titles, release dates, genres, book sources, and featured sites.
