@@ -1,5 +1,3 @@
-[Back to Overview](index.md)
-
 # Test the JSON Server
 
 The goal here is to start the JSON server, test to see that it is running, and make a test call using cURL to see if you get a response.
