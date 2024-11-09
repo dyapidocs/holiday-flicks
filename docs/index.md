@@ -32,5 +32,5 @@ Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is 
 
 ## Reference Topics
 
-* [/works](#)
+* [/works](api/works.md)
 * [/locations](#)
