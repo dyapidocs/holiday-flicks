@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Obtain API Key for Holiday Flicks API
 
 To use the Holiday Flicks API, you'll need to obtain an API key for authentication. Follow these steps to register and receive your API key.

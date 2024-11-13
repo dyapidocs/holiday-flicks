@@ -46,3 +46,7 @@ The goal here is to start the JSON server, test to see that it is running, and m
         "loc_id": 1
     }
     ```
+
+## Next Steps
+
+* First time users can start with our [Quickstart Guide](quickstart.md).

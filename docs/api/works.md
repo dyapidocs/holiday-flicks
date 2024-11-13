@@ -40,14 +40,7 @@ Retrieves a list of all works in the catalogue.
 **Example Request**
 
 ```bash
-GET /works?genre=Thriller&platform=Netflix
-```
-
-**Example cURL**
-
-```bash
-curl -H "Authorization: Bearer YOUR_API_KEY" \
-"https://api.holidayflicks.com/v1/works?genre=Thriller&platform=Netflix"
+GET /works?genre=Thriller
 ```
 
 **Example Response**
@@ -78,13 +71,6 @@ Retrieves detailed information about a specific work by its ID.
 
 ```bash
 GET /works/2
-```
-
-**Example cURL**
-
-```bash
-curl -H "Authorization: Bearer YOUR_API_KEY" \
-"https://api.holidayflicks.com/v1/works/2"
 ```
 
 **Example Response**
@@ -134,22 +120,6 @@ Creates a new work entry in the catalogue.
 }
 ```
 
-**Example cURL**
-
-```bash
-curl -X POST -H "Authorization: Bearer YOUR_API_KEY" \
--H "Content-Type: application/json" \
--d '{
-  "title": "New Movie Title",
-  "source": "Original Script",
-  "release_date": "2025",
-  "platform": "Netflix",
-  "genre": "Drama",
-  "loc_id": 5
-}' \
-"https://api.holidayflicks.com/v1/works"
-```
-
 **Example Response**
 
 _Status Code: 201 Created_
@@ -192,18 +162,6 @@ Include only the fields you wish to update.
 }
 ```
 
-**Example cURL**
-
-```bash
-curl -X PUT -H "Authorization: Bearer YOUR_API_KEY" \
--H "Content-Type: application/json" \
--d '{
-  "platform": "Netflix, Prime Video",
-  "release_date": "2021"
-}' \
-"https://api.holidayflicks.com/v1/works/3"
-```
-
 **Example Response**
 
 _Status Code: 200 OK_
@@ -232,13 +190,6 @@ Deletes a work entry from the catalogue.
 
 ```bash
 DELETE /works/5
-```
-
-**Example cURL**
-
-```bash
-curl -X DELETE -H "Authorization: Bearer YOUR_API_KEY" \
-"https://api.holidayflicks.com/v1/works/5"
 ```
 
 **Example Response**

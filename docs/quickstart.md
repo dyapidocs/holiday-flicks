@@ -2,14 +2,13 @@
 layout: page
 ---
 
-
 # Quickstart Guide
 
 Welcome to the Holiday Flicks API Quickstart Guide. This guide will help you make your first API calls and explore the key endpoints.
 
 ## Prerequisites
 
-Verify the JSON server is running by completing. If not, refer to [Startup](startup.md) to start the server.
+Verify the JSON server is running by completing Step 1 below or refer to [Startup](startup.md) to start the server.
 
 ## Step 1: Testing the API with curl
 
