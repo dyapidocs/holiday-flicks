@@ -26,7 +26,7 @@ Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is 
 
 1. [Obtain an API Key](register_api_key.md) to use the Holiday Flicks API.
 2. [Test the JSON Server](startup.md) to see if you can make calls to the Holiday Flicks API.
-3. Read the [Quickstart Guide](quickstart.md) guide to learn how to...
+3. Read the [Quickstart Guide](quickstart.md) guide to learn how to retrieve all works (including works by id) and how to add a new work (movie).
 
 ## Tutorials
 
