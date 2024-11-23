@@ -8,11 +8,11 @@ The `locations` resource represents filming locations featured in the Holiday Fl
 
 ## Endpoints Overview
 
-- **GET `/locations`** - Retrieve a list of all locations.
-- **GET `/locations/{id}`** - Retrieve details of a specific location by ID.
-- **POST `/locations`** - Create a new location entry.
-- **PUT `/locations/{id}`** - Update an existing location.
-- **DELETE `/locations/{id}`** - Delete a location entry.
+- [**GET `/locations`**](#get-locations) - Retrieve a list of all locations.
+- [**GET `/locations/{id}`**](#get-locationsid) - Retrieve details of a specific location by ID.
+- [**POST `/locations`**](#post-locations) - Create a new location entry.
+- [**PUT `/locations/{id}`**](#put-locationsid) - Update an existing location.
+- [**DELETE `/locations/{id}`**](#delete-locationsid) - Delete a location entry.
 
 ## Authentication
 
@@ -26,7 +26,7 @@ Authorization: Bearer YOUR_API_KEY
 
 ## Endpoint Details
 
-### 1. GET `/locations`
+### GET `/locations`
 
 Retrieves a list of all locations in the catalogue.
 
@@ -62,7 +62,7 @@ GET /locations?region=Normandie
 ]
 ```
 
-### 2. GET `/locations/{id}`
+### GET `/locations/{id}`
 
 Retrieves detailed information about a specific location by its ID.
 
@@ -94,7 +94,7 @@ GET /locations/3
 }
 ```
 
-### 3. POST `/locations`
+### POST `/locations`
 
 Creates a new location entry in the catalogue.
 
@@ -103,20 +103,7 @@ Creates a new location entry in the catalogue.
 - `Content-Type`: application/json
 - `Authorization`: Bearer YOUR_API_KEY
 
-**Request Body (JSON)**
-
-| Field              | Type    | Required | Description                              |
-|--------------------|---------|----------|------------------------------------------|
-| `name`             | string  | Yes      | Name of the specific location or site.   |
-| `address`          | string  | No       | Street address of the location.          |
-| `town`             | string  | Yes      | Town or city where the location is situated. |
-| `region`           | string  | Yes      | Administrative region of the location.   |
-| `longitude`        | string  | Yes      | Longitude coordinate (decimal degrees).  |
-| `latitude`         | string  | Yes      | Latitude coordinate (decimal degrees).   |
-| `tourist_info`     | string  | No       | URL to local tourist information.        |
-| `local_film_office`| string  | No       | Contact information for the local film office. |
-| `regional_film_office` | string | No    | URL to the regional film office.         |
-| `seen_in`          | integer | Yes      | ID of the associated work (works.id).    |
+**Fields:** Refer to the [Data Model: Location Object](#data-model-location-object) table for fields.
 
 **Example Request**
 
@@ -137,7 +124,9 @@ Creates a new location entry in the catalogue.
 
 **Example Response**
 
-_Status Code: 201 Created_
+```bash
+Status Code: 201 Created
+```
 
 ```json
 {
@@ -155,7 +144,7 @@ _Status Code: 201 Created_
 }
 ```
 
-### 4. PUT `/locations/{id}`
+### PUT `/locations/{id}`
 
 Updates an existing location entry.
 
@@ -182,7 +171,9 @@ Include only the fields you wish to update.
 
 **Example Response**
 
-_Status Code: 200 OK_
+```bash
+Status Code: 200 OK
+```
 
 ```json
 {
@@ -200,7 +191,7 @@ _Status Code: 200 OK_
 }
 ```
 
-### 5. DELETE `/locations/{id}`
+### DELETE `/locations/{id}`
 
 Deletes a location entry from the catalogue.
 
@@ -216,11 +207,11 @@ DELETE /locations/6
 
 **Example Response**
 
-_Status Code: 204 No Content_
+```bash
+Status Code: 204 No Content
+```
 
 No body is returned.
-
----
 
 ## Data Model: Location Object
 
@@ -276,15 +267,11 @@ Errors are returned in JSON format with an error object.
 }
 ```
 
----
-
 ## Notes
 
 - **Pagination**: If the number of locations is large, pagination parameters such as `page` and `limit` may be supported (check the API for details).
 - **Data Validation**: All required fields should be provided and correctly formatted when creating or updating resources.
 - **Rate Limiting**: Be aware of any rate limits applied to the API to prevent exceeding allowed usage.
-
----
 
 ## Examples in Different Programming Languages
 
