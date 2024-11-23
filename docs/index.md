@@ -31,6 +31,7 @@ Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is 
 ## Tutorials
 
 * [Find Movies by Location](tutorials/find_movies_by_location.md)
+* [Filter Works by Genre or Platform](tutorials/filter_works.md)
 * Integrating Location Data into Maps
 * Contacting Local Filming Offices
 
