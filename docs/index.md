@@ -20,7 +20,7 @@ Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is 
 ## Value Proposition
 
 * **For Tourists:** Plan holidays around cinematic sites and enrich travel experiences.
-* **For Tourism Professionals and Local Authorities:** Promote regional attractions, attract visitors, and encourage film and TV productions, boosting regional economies.
+* **For Tourism Professionals and Local Authorities:** Promote regional attractions, attract visitors, and encourage film and TV productions to help boost regional economies.
 
 ## Get Started
 
@@ -32,8 +32,6 @@ Welcome to the Holiday Flicks API documentation. The Holiday Flicks REST API is 
 
 * [Find Movies by Location](tutorials/find_movies_by_location.md)
 * [Filter Works by Genre or Platform](tutorials/filter_works.md)
-* Integrating Location Data into Maps
-* Contacting Local Filming Offices
 
 ## Reference Topics
 

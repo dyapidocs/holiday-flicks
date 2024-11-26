@@ -8,13 +8,14 @@ Welcome to the Holiday Flicks API Quickstart Guide. This guide will help you mak
 
 ## Prerequisites
 
-Verify the JSON server is running by completing Step 1 below or refer to [Startup](startup.md) to start the server.
+* Verify the JSON server is running by completing instructions in [Startup](startup.md).
+* This Quickstart Guide uses cURL but you can use Postman to make requests and receive responses.
 
-## Step 1: Testing the API with curl
+## Testing the API with curl
 
 ### Retrieve All Works
 
-To fetch all movies and series in the Holiday Flicks catalog, use the following command:
+To fetch all movies and series in the Holiday Flicks catalogue, use the following command:
 
 ```bash
 curl http://localhost:3000/works
@@ -50,11 +51,11 @@ To filter works by genre (e.g., “historical fiction”), use:
 curl "http://localhost:3000/works?genre=historical%20fiction"
 ```
 
-## Step 2: Making POST Requests
+## Making POST Requests
 
 ### Add a New Work
 
-To add a new movie or series to the catalog, use the following command. Make sure to replace the placeholders with your data.
+To add a new movie or series to the catalogue, use the following command. Make sure to replace the placeholders with your data.
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"id": null, "title": "New Movie", "source": "Original Script", "release_date": "2024", "platform": "Prime", "genre": "Drama", "loc_id": 2}' http://localhost:3000/works
@@ -92,9 +93,6 @@ You can verify the new work by calling:
 curl http://localhost:3000/works/5
 ```
 
-
-
-
 ### Add Location For Ronin
 
 #### Request
@@ -120,3 +118,15 @@ curl -X POST -H "Content-Type: application/json" -d '{"id": null, "name": "Ville
   "seen_in": 5
 }
 ```
+## Next Steps
+
+* **Explore More Endpoints:** Check out the API Reference for [/works](api/works.md) or [/locations](api/locations.md) to learn about other available endpoints and functionalities.
+* **Explore Tutorials:** Learn how to [Find Movies by Location](tutorials/find_movies_by_location.md) or [Filter Works by Genre or Platform](tutorials/filter_works.md). 
+* **Integrate into Applications:** Use these API calls within your applications to provide dynamic content to users.
+* **Provide Feedback:** If you have suggestions or encounter issues, please contact us at support@holidayflicks.com.
+
+## Need Help?
+- **Documentation**: Refer to the API Reference for Works and API Reference for Locations for detailed information.
+- **Support**: Contact us at support@holidayflicks.com.
+
+Happy exploring with the Holiday Flicks API!
