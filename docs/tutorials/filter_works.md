@@ -73,7 +73,7 @@ GET /works?genre=Thriller
 
 ## Step 2: Retrieve Works by Platform
 
-You can filter works based on the platform(s) where they are available.
+You can filter works based on the platform(s) where they are available. Note that with the `platform` field there could be multiple entries, ie. `Netflix, Prime Video`. To search fields that have multiple entries, use `_like` such as `platform_like` in your calls.
 
 ### Example: Fetch Works Available on "Netflix"
 
@@ -89,40 +89,40 @@ You can filter works based on the platform(s) where they are available.
 ### Example Request
 
 ```shell
-GET /works?platform=Netflix
+GET /works?platform_like=Netflix
 ```
 
 ### Expected Response
 
 ```json
 [
-  {
-    "id": 1,
-    "title": "All the Lights We Cannot See",
-    "source": "All the Lights We Cannot See (novel)",
-    "release_date": "2023",
-    "platform": "Netflix",
-    "genre": "Historical Fiction",
-    "loc_id": 2
-  },
-  {
-    "id": 4,
-    "title": "Lupin",
-    "source": "Inspired by Arsène Lupin (novels)",
-    "release_date": "2021",
-    "platform": "Netflix",
-    "genre": "Crime Drama",
-    "loc_id": 2
-  },
-  {
-    "id": 3,
-    "title": "Stillwater",
-    "source": "Original Script",
-    "release_date": "2021",
-    "platform": "Netflix, Prime Video",
-    "genre": "Thriller",
-    "loc_id": 3
-  }
+    {
+        "id": 1,
+        "title": "All the lights we cannot see",
+        "source": "All the lights we cannot see (novel)",
+        "release_date": "2023",
+        "platform": "Netflix",
+        "genre": "historical fiction",
+        "loc_id": 1
+    },
+    {
+        "id": 3,
+        "title": "Stillwater",
+        "source": "original script",
+        "release_date": "2021",
+        "platform": "Netflix,Prime",
+        "genre": "Thriller",
+        "loc_id": 3
+    },
+    {
+        "id": 4,
+        "title": "Lupin",
+        "source": "Arsene Lupin",
+        "release_date": "2021",
+        "platform": "Netflix",
+        "genre": "Crime Drama",
+        "loc_id": 2
+    }
   // Additional works...
 ]
 ```
@@ -146,7 +146,7 @@ You can combine multiple query parameters to refine your search further.
 ### Example Request
 
 ```shell
-GET /works?genre=Thriller&platform=Netflix
+GET /works?genre=Thriller&platform_like=Netflix
 ```
 
 ### Expected Response
@@ -178,36 +178,36 @@ You can also filter works based on their release year.
 - **Headers**:
   - `Authorization`: `Bearer YOUR_API_KEY`
 - **Query Parameters**:
-  - `release_year`: `2021`
+  - `release_date`: `2021`
 
 ### Example Request
 
 ```shell
-GET /works?release_year=2021
+GET /works?release_date=2021
 ```
 
 ### Expected Response
 
 ```json
 [
-  {
-    "id": 3,
-    "title": "Stillwater",
-    "source": "Original Script",
-    "release_date": "2021",
-    "platform": "Netflix, Prime Video",
-    "genre": "Thriller",
-    "loc_id": 3
-  },
-  {
-    "id": 4,
-    "title": "Lupin",
-    "source": "Inspired by Arsène Lupin (novels)",
-    "release_date": "2021",
-    "platform": "Netflix",
-    "genre": "Crime Drama",
-    "loc_id": 2
-  }
+    {
+        "id": 3,
+        "title": "Stillwater",
+        "source": "original script",
+        "release_date": "2021",
+        "platform": "Netflix,Prime",
+        "genre": "Thriller",
+        "loc_id": 3
+    },
+    {
+        "id": 4,
+        "title": "Lupin",
+        "source": "Arsene Lupin",
+        "release_date": "2021",
+        "platform": "Netflix",
+        "genre": "Crime Drama",
+        "loc_id": 2
+    }
   // Additional works...
 ]
 ```
@@ -227,12 +227,12 @@ Combine multiple filters to narrow down the results even further.
 - **Query Parameters**:
   - `genre`: `Thriller`
   - `platform`: `Netflix`
-  - `release_year`: `2021`
+  - `release_date`: `2021`
 
 ### Example Request
 
 ```shell
-GET /works?genre=Thriller&platform=Netflix&release_year=2021
+GET /works?genre=Thriller&platform_like=Netflix&release_date=2021
 ```
 
 ### Expected Response
@@ -253,9 +253,9 @@ GET /works?genre=Thriller&platform=Netflix&release_year=2021
 
 ## Notes on Filtering
 
-* Case Sensitivity: The API treats query parameter values as case-insensitive. For example, `Thriller` and `thriller` yield the same results.
-* Partial Matches: The API does not support partial matches for query parameters. The value must match exactly.
-* Multiple Values: If a field contains multiple values (e.g., `"platform": "Netflix, Prime Video"`), the API will return works if any of the platforms match the query.
+* **Case Sensitivity:** The API treats query parameter values as case-insensitive. For example, `Thriller` and `thriller` will not return the same results.
+* **Partial Matches:** The API does not support partial matches for query parameters. The value must match exactly.
+* **Multiple Values:** If a field contains multiple values (e.g., `"platform": "Netflix, Prime Video"`), the API will return works if any of the platforms match the query when `_like` is appended to the field name such as `platform_like`.
 
 ## Handling No Results
 
@@ -266,7 +266,7 @@ If no works match the provided filters, the API will return an empty array.
 #### Example Request
 
 ```bash
-GET /works?genre=Sci-Fi&platform=HBO
+GET /works?genre=Sci-Fi&platform_like=HBO
 ```
 
 #### Example Response
@@ -277,29 +277,16 @@ GET /works?genre=Sci-Fi&platform=HBO
 
 ## Congratulations
 
-You've learned how to filter works by genre, platform, and release year using the Holiday Flicks API. By combining query parameters, you can refine your searches to find exactly what you're looking for.
+You have learned how to filter works by genre, platform, and release year using the Holiday Flicks API. By combining query parameters, you can refine your searches to find exactly what you're looking for.
 
 ## Next Steps
 
-* **Explore More Endpoints:** Check out the API Reference for Works to learn about other available endpoints and functionalities.
+* **Explore More Endpoints:** Check out the API Reference for [/works](../api/works.md) or [/locations](../api/locations.md) to learn about other available endpoints and functionalities.
+* **Explore Tutorials:** Learn how to [Find Movies by Location](../tutorials/find_movies_by_location.md) or [Filter Works by Genre or Platform](../tutorials/filter_works.md). 
 * **Integrate into Applications:** Use these API calls within your applications to provide dynamic content to users.
 * **Provide Feedback:** If you have suggestions or encounter issues, please contact us at support@holidayflicks.com.
 
-
-
-
-
-
-
-
-
-PREVIOUS TUTORIAL
-
-- **Error Handling**: If you receive a 404 Not Found, verify that the `loc_id` or other parameters are correct.
-- **Pagination**: Be sure to handle pagination if the API supports it.
-
 ## Need Help?
-- **Documentation**: Refer to the API Reference for Works and API Reference for Locations for detailed information.
 - **Support**: Contact us at support@holidayflicks.com.
 
 Happy exploring with the Holiday Flicks API!
