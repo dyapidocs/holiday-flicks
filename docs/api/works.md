@@ -96,7 +96,7 @@ Creates a new work entry in the catalogue.
 - `Content-Type`: application/json
 - `Authorization`: Bearer YOUR_API_KEY
 
-**Fields:** Refer to the [Data Model: Location Object](#data-model-works-object) table for fields.
+**Fields:** Refer to the [Data Model: Location Object](#data-model-work-object) table for fields.
 
 **Example Request**
 
@@ -194,8 +194,6 @@ Status Code: 204 No Content
 ```
 
 No body is returned.
-
-## Data Model: Work Object
 
 ## Data Model: Work Object
 
