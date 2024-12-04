@@ -35,6 +35,15 @@
       "platform": "Netflix",
       "genre": "Crime Drama",
       "loc_id": 2
+    },
+    {
+      "id": 5,
+      "title": "Ronin",
+      "source": "Original Script",
+      "release_date": "1998",
+      "platform": "Prime, Hulu",
+      "genre": "Action Thriller",
+      "loc_id": null
     }
   ],
   "locations": [

@@ -8,7 +8,7 @@ Welcome to the Holiday Flicks API Quickstart Guide. This guide will help you mak
 
 ## Prerequisites
 
-* Verify the JSON server is running by completing instructions in the [Startup](startup.md).
+* Verify the JSON server is running by completing instructions in the [API Startup](startup.md) guide.
 * Use cURL or Postman to make requests and receive responses.
 
 ## Test the API
@@ -217,7 +217,6 @@ Use the `id` from the `works` you added for the `seen_in` POST. In our example a
 * **Provide Feedback:** If you have suggestions or encounter issues, please contact us at support@holidayflicks.com.
 
 ## Need Help?
-- **Documentation**: Refer to the API Reference for Works and API Reference for Locations for detailed information.
 - **Support**: Contact us at support@holidayflicks.com.
 
 Happy exploring with the Holiday Flicks API!

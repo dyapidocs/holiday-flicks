@@ -152,9 +152,9 @@ You have successfully used the Holiday Flicks API to find movies and series by l
 - **Film Enthusiasts**: Discovering new works based on filming sites.
 - **Industry Professionals**: Researching filming locations and associated works.
 
-**Additional Tips**
+## Additional Tip: Combine Filters
 
-- **Combine Filters**: When searching for works, you can combine multiple query parameters.
+When searching for works, you can combine multiple query parameters.
 
 ### Example Request
 
